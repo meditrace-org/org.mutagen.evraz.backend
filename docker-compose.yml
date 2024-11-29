@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    extends:
+      file: org.mutagen.evraz.rabbitmq/docker-compose.yml
+      service: rabbitmq
+    env_file: ".env"
+
+  mongo:
+    extends:
+      file: org.mutagen.evraz.mongodb/docker-compose.yml
+      service: mongo
+    env_file: ".env"
+
+  evraz-api:
+    extends:
+      file: org.mutagen.evraz.api/docker-compose.yml
+      service: evraz-api
+    env_file: ".env"
+    depends_on:
+      - mongo
+      - rabbitmq
+
+  evraz-tg-bot:
+    extends:
+      file: org.mutagen.evraz.telegram_bot/docker-compose.yml
+      service: evraz-tg-bot
+    env_file: ".env"
+    depends_on:
+      - evraz-api
+
+networks:
+  mutagen-evraz-backend:
+    name: mutagen-evraz-backend
