@@ -1,12 +1,12 @@
 [submodule "org.mutagen.evraz.api"]
 	path = org.mutagen.evraz.api
-	url = https://github.com/meditrace-org/org.mutagen.evraz.api.git
+	url = git@github.com:meditrace-org/org.mutagen.evraz.api.git
 [submodule "org.mutagen.evraz.telegram_bot"]
 	path = org.mutagen.evraz.telegram_bot
-	url = https://github.com/meditrace-org/org.mutagen.evraz.telegram_bot.git
+	url = git@github.com:meditrace-org/org.mutagen.evraz.telegram_bot.git
 [submodule "org.mutagen.evraz.rabbitmq"]
 	path = org.mutagen.evraz.rabbitmq
-	url = https://github.com/meditrace-org/org.mutagen.evraz.rabbitmq.git
+	url = git@github.com:meditrace-org/org.mutagen.evraz.rabbitmq.git
 [submodule "org.mutagen.evraz.mongodb"]
 	path = org.mutagen.evraz.mongodb
-	url = https://github.com/meditrace-org/org.mutagen.evraz.mongodb.git
+	url = git@github.com:meditrace-org/org.mutagen.evraz.mongodb.git
